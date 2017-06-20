@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MyProj API Documentation</title>
+    <link media="screen" rel="stylesheet" type="text/css"
+    href="/swaggerui/bower/swagger-ui/dist/css/typography.css" />
+<link media="screen" rel="stylesheet" type="text/css"
+    href="/swaggerui/bower/swagger-ui/dist/css/reset.css" />
+<link media="screen" rel="stylesheet" type="text/css"
+    href="/swaggerui/bower/swagger-ui/dist/css/reset.css" />
+<link media="screen" rel="stylesheet" type="text/css"
+    href="/swaggerui/bower/swagger-ui/dist/css/screen.css" />
+<link media="print" rel="stylesheet" type="text/css"
+    href="/swaggerui/bower/swagger-ui/dist/css/reset.css"/>
+<link href="/swaggerui/bower/swagger-ui/dist/css/screen.css"
+    media="print" rel="stylesheet" type="text/css"/>
+    <script src="/swaggerui/bower/swagger-ui/dist/lib/jquery-1.8.0.min.js" type="text/javascript"></script>
+<script src="/swaggerui/bower/swagger-ui/dist/lib/jquery.slideto.min.js" type="text/javascript"></script>
+<script src="/swaggerui/bower/swagger-ui/dist/lib/jquery.wiggle.min.js" type="text/javascript"></script>
+<script src="/swaggerui/bower/swagger-ui/dist/lib/jquery.ba-bbq.min.js" type="text/javascript"></script>
+<script src="/swaggerui/bower/swagger-ui/dist/lib/handlebars-2.0.0.js" type="text/javascript"></script>
+<script src="/swaggerui/bower/swagger-ui/dist/lib/underscore-min.js" type="text/javascript"></script>
+<script src="/swaggerui/bower/swagger-ui/dist/lib/backbone-min.js" type="text/javascript"></script>
+
+<script src="/swaggerui/bower/swagger-ui/dist/swagger-ui.js" type="text/javascript"></script>
+
+<script src="/swaggerui/bower/swagger-ui/dist/lib/highlight.7.3.pack.js" type="text/javascript"></script>
+<script src="/swaggerui/bower/swagger-ui/dist/lib/jsoneditor.min.js" type='text/javascript'></script>
+<script src="/swaggerui/bower/swagger-ui/dist/lib/marked.js" type="text/javascript"></script>
+
+</head>
+
+<body class="swagger-section">
+    <div id="message-bar" class="swagger-ui-wrap">&nbsp;</div>
+    <div id="swagger-ui-container" class="swagger-ui-wrap">
+
+      <div class="info" id="api_info">
+        <div class="info_title">MyProj API Documentation</div>
+
+        <div class="info_description markdown">
+        {% for api_flavor in api_flavors %}
+          <ul>
+            <li>{{ api_flavor.name }}: <a href="{{ api_flavor.url_prefix }}">{{ api_flavor.url_prefix }}</a></li>
+          </ul>
+        {% endfor %}
+        </div>
+
+    </div>
+</body>
+</html>
